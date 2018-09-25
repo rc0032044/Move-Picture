@@ -56,5 +56,31 @@ namespace Move_Picture
 		{
 
 		}
-	}
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private async void ffffffffffffffffffffff_Click(object sender, EventArgs e)
+        {
+            int d;
+
+            try
+            {
+                d = Convert.ToInt32(textBox1.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Dont be an idiot. Type in a number");
+                d = 10;
+            }
+
+            for (int i = 0; i < 10; i++)
+            {
+                pictureBox1.Location = new Point(pictureBox1.Location.X + 5, pictureBox1.Location.Y);
+                await Task.Delay(d);
+            }
+        }
+    }
 }
